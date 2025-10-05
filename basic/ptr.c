@@ -35,16 +35,20 @@ float   4
     int *ptr;
 
 
-    *ptr = mallco(sizeof(int) * 5); // 4 * 5 = 20
-
+    *ptr = malloc(sizeof(int) * 5); // 4 * 5 = 20
+    
     for(int i=0; i<5; i++){
         printf("%d", *ptr);
     }
-
-
-
+    
+    
+    
     // callco(); // block memory
+    *ptr = calloc(10,sizeof(int)); // 4 * 5 = 20
+    
+
     // free(); //  free the memory
+    free(*ptr);
 
 
     return 0; 
